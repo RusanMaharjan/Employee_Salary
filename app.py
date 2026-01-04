@@ -64,6 +64,18 @@ ax.set_xlabel("Engagement Survey")
 ax.set_ylabel("Salary")
 st.pyplot(fig)
 
+fig, ax = plt.subplots()
+sns.regplot(
+    x = X['EmpSatisfaction'],
+    y=Y,
+    scatter_kws={'color': 'blue', 'alpha':0.7},
+    line_kws={'color':'red'},
+    ax = ax
+)
+ax.set_xlabel("Employee Satisfaction")
+ax.set_ylabel("Salary")
+st.pyplot(fig)
+
 
 fig, axes = plt.subplots(2, 2, figsize=(14, 16))
 axes = axes.flatten()
